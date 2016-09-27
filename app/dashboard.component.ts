@@ -15,7 +15,7 @@ export class DashboardComponent {
 
     constructor(
         private router: Router,
-        private heroService: HeroService) {}
+        private heroService: HeroService) {} 
 
     ngOnInit(): void {
         this.heroService.getHeroes()
@@ -26,4 +26,4 @@ export class DashboardComponent {
         let link = ['/detail', hero.id];
         this.router.navigate(link);
     }
-}
+} 

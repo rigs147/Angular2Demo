@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="item in items" (contextmenu)="onContextMenu($event, item)">Right Click: {{item.name}}</li>
+</ul>
+<context-menu (close)="processContextMenuCloseEvent()">
+  <template contextMenuItem (execute)="alert('Hi, ' + $event.item.name)">
+    Say hi!
+  </template>
+  <template contextMenuItem let-item (execute)="alert('Bye, ' + $event.item.name)">
+    Bye, {{item.name}}
+  </template>
+</context-menu>

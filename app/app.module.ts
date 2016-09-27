@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule}     from '@angular/forms';
 import {routing}         from './app.routing';
 import {HttpModule}      from '@angular/http';
+// import { ContextMenuService } from 'angular2-contextmenu';
 import './rxjs-extensions';
 
 // Imports for loading & configuring the in-memory web api
@@ -19,6 +20,9 @@ import {HeroesComponent} from './heroes.component';
 import {HeroService} from './hero.service';
 import {HeroSearchComponent} from './hero-search.component';
 
+//ContextMenuComponent
+//import {MyContextMenuComponent} from './context-menu.component';
+
 //DashboardComponent
 import {DashboardComponent} from './dashboard.component';
 
@@ -26,13 +30,15 @@ import {DashboardComponent} from './dashboard.component';
   imports: [ BrowserModule,
              FormsModule,
              HttpModule,
-             InMemoryWebApiModule.forRoot(InMemoryDataService),
+             InMemoryWebApiModule.forRoot(InMemoryDataService), 
              routing],
   declarations: [ AppComponent,
                   DashboardComponent,
                   HeroDetailComponent,
                   HeroesComponent,
-                  HeroSearchComponent ],
+                  HeroSearchComponent,
+                  //MyContextMenuComponent 
+                  ],
   providers: [
      HeroService 
   ],
