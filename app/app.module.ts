@@ -20,8 +20,9 @@ import {HeroesComponent} from './heroes.component';
 import {HeroService} from './hero.service';
 import {HeroSearchComponent} from './hero-search.component';
 
+//Todo: This didnt work. Come back.
 //ContextMenuComponent
-//import {MyContextMenuComponent} from './context-menu.component';
+import {MyContextMenuComponent} from  './context-menu/context-menu.component';
 
 //DashboardComponent
 import {DashboardComponent} from './dashboard.component';
@@ -37,7 +38,7 @@ import {DashboardComponent} from './dashboard.component';
                   HeroDetailComponent,
                   HeroesComponent,
                   HeroSearchComponent,
-                  //MyContextMenuComponent 
+                  MyContextMenuComponent 
                   ],
   providers: [
      HeroService 

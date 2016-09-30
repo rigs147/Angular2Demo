@@ -1,18 +1,20 @@
 import {Component} from '@angular/core';
-import { ContextMenuService } from 'angular2-contextmenu';
+
+import { ContextMenuComponent, ContextMenuService } from 'angular2-contextmenu';
 
 @Component({
     selector: 'my-context-menu',
-    templateUrl: 'app/context-menu.html',
-    styleUrls: ['app/context-menu.css']
+    templateUrl: 'app/context-menu/context-menu.html',
+    styleUrls: ['app/context-menu/context-menu.css']
 })
 export class MyContextMenuComponent {
 
-  items = [
+  public items = [
       { name: 'John', otherProperty: 'Foo' },
       { name: 'Joe', otherProperty: 'Bar' }];
 
 
+  //@Injectable()
   constructor(private contextMenuService: ContextMenuService) {}
 
   onContextMenu($event: MouseEvent, item: any): void {
